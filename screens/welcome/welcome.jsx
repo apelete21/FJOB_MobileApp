@@ -1,11 +1,16 @@
 import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { imgs } from '../../images'
-import { colors, font, viewport } from '../../constants'
 import { StatusBar } from 'expo-status-bar'
 import { styles } from './welcome.styles'
+import { useNavigation } from '@react-navigation/native'
+import { Button } from '../../components'
 
 export function Welcome() {
+    const navigation = useNavigation()
+    const goSignUp = () => {
+        navigation.navigate("signup")
+    }
     return (
         <>
             <StatusBar style='light' />
@@ -32,11 +37,7 @@ export function Welcome() {
                     </Text>
 
                     {/* <View style={styles.btnContainer}> */}
-                    <TouchableOpacity style={styles.startBtn}>
-                        <Text style={styles.startText}>
-                            get started
-                        </Text>
-                    </TouchableOpacity>
+                    <Button name={"get started"} onPress={goSignUp} style={{}} />
                     {/* </View> */}
                 </View>
 

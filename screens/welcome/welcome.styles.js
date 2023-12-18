@@ -47,19 +47,5 @@ export const styles = StyleSheet.create({
         width: "80%",
         textAlign: 'center',
         fontFamily: font.p3
-    },
-    startBtn: {
-        width: "100%",
-        marginHorizontal: 20,
-        backgroundColor: colors.primary,
-        paddingVertical: 10,
-        borderRadius: 25
-    },
-    startText: {
-        textAlign: "center",
-        color: colors.white,
-        fontFamily: font.p7,
-        textTransform: "capitalize",
-        fontSize: 18
     }
 })

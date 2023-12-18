@@ -7,8 +7,9 @@ export const viewport = {
 
 export const colors = {
     primary: "#248E42",
-    secondary: "",
-    tertiary: "",
+    secondary: "#777777",
+    tertiary: "rgba(0,0,0, 0.55)",
+    fourth: "#F5F5F5",
     white: "#fff",
     dark: "#000"
 }
