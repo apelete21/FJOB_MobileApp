@@ -42,6 +42,7 @@ export default function App() {
           }}>
             <Stack.Screen name='welcome' component={Welcome} />
             <Stack.Screen name='signup' component={Signup} />
+            <Stack.Screen name='confirm' component={Signup} />
           </Stack.Group>
         </Stack.Navigator>
       </NavigationContainer>

@@ -1,6 +1,8 @@
-import { StyleSheet, Text, TouchableOpacity } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { colors, font } from '../constants'
+import { useNavigation } from '@react-navigation/native'
+import { imgs } from '../images'
 
 export function Button({ name, style, onPress }) {
     return (
@@ -9,6 +11,20 @@ export function Button({ name, style, onPress }) {
                 {name}
             </Text>
         </TouchableOpacity>
+    )
+}
+
+export function BackBtn() {
+    const navigation = useNavigation()
+    return (
+        <>
+            <TouchableOpacity onPress={() => {
+                console.log("Going back")
+                navigation.goBack()
+            }}>
+                <Image source={imgs.arleft} />
+            </TouchableOpacity>
+        </>
     )
 }
 

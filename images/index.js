@@ -3,4 +3,5 @@ export const imgs = {
     apple: require("../assets/apple.svg"),
     google: require("../assets/google.svg"),
     facebook: require("../assets/facebook.svg"),
+    arleft: require("../assets/ar-left.png"),
 }
