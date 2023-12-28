@@ -11,7 +11,9 @@ export const colors = {
     tertiary: "rgba(0,0,0, 0.55)",
     fourth: "#F5F5F5",
     white: "#fff",
-    dark: "#000"
+    dark: "#000",
+    greenLight: "#248E4265",
+    transparent: "#0000"
 }
 
 export const font = {

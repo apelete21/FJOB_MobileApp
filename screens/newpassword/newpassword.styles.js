@@ -25,13 +25,12 @@ export const styles = StyleSheet.create({
         fontSize: 14,
         fontFamily: font.p4,
         color: colors.secondary,
-        marginHorizontal: "17%",
+        marginHorizontal: "10%",
         textAlign: "center",
         marginBottom: viewport.height * 0.02
     },
     formcontainer: {
         width: "100%",
-        paddingHorizontal: "5%",
     },
     forminputcontainer: {
         marginBottom: viewport.height * 0.015,
@@ -47,36 +46,15 @@ export const styles = StyleSheet.create({
         backgroundColor: colors.fourth,
         borderRadius: 10,
     },
-    checkboxContainer: {
-        display: "flex",
-        flexDirection: "row",
-        alignItems: 'center',
-        gap: 18,
-        marginTop: 10,
-    },
-    checkbox: {
-        width: 20,
-        height: 20,
-        borderRadius: 5,
-        borderWidth: 2,
-        borderColor: colors.primary,
-    },
-    terms: {
-        fontSize: 12,
-        fontFamily: font.p5
-    },
-    termGreen: {
-        color: colors.primary,
-        textDecorationLine: 'underline',
-    },
     btnContainer: {
         marginBottom: viewport.height * 0.055,
         marginTop: viewport.height * 0.06,
+        gap: 15
     },
     otheroptions: {
         flexDirection: 'row',
         gap: viewport.width * 0.05,
-        width: "70%",
+        width: "80%",
         justifyContent: "center",
         alignItems: "center"
     },
@@ -89,28 +67,10 @@ export const styles = StyleSheet.create({
         height: 1,
         backgroundColor: colors.dark
     },
-    authoptions: {
-        marginVertical: viewport.height * 0.05,
-        flexDirection: 'row',
-        justifyContent: "space-evenly",
-        width: "70%",
-    },
-    authIcon: {
-        width: 30,
-        height: 30,
-    },
-    haveanaccount: {
-        alignItems: "center",
-    },
-    haveanaccountText: {
-        fontSize: 14,
-        fontFamily: font.p5
-    },
-    haveanaccountTextGreen: {
-        fontSize: 14,
-        fontFamily: font.p5,
+    passRetrievelink: {
+        fontFamily: font.p7,
         color: colors.primary,
-        textDecorationLine: 'underline',
-        marginBottom: 0
-    },
+        textDecorationLine: "underline",
+        textAlign: "right"
+    }
 })

@@ -1,13 +1,13 @@
 import { Image, StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { colors, font } from '../constants'
+import { colors, font, viewport } from '../constants'
 import { useNavigation } from '@react-navigation/native'
 import { imgs } from '../images'
 
-export function Button({ name, style, onPress }) {
+export function Button({ name, style, fontStyle, onPress }) {
     return (
-        <TouchableOpacity style={{ ...styles.startBtn, style }} onPress={onPress}>
-            <Text style={styles.startText}>
+        <TouchableOpacity style={{ ...styles.startBtn, ...style }} onPress={onPress}>
+            <Text style={{...styles.startText, ...fontStyle}}>
                 {name}
             </Text>
         </TouchableOpacity>
@@ -22,7 +22,7 @@ export function BackBtn() {
                 console.log("Going back")
                 navigation.goBack()
             }}>
-                <Image source={imgs.arleft} />
+                <Image source={imgs.arleft} resizeMode='cover'  />
             </TouchableOpacity>
         </>
     )
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     startBtn: {
         width: "100%",
         backgroundColor: colors.primary,
-        paddingVertical: 10,
+        paddingVertical: viewport.height * 0.005,
         borderRadius: 30
     },
     startText: {
@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
         color: colors.white,
         fontFamily: font.p6,
         textTransform: "capitalize",
-        fontSize: 19
+        fontSize: 17
     }
 })
