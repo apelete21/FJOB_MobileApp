@@ -4,4 +4,5 @@ export const imgs = {
     google: require("../assets/google.png"),
     facebook: require("../assets/facebook.png"),
     arleft: require("../assets/ar-left.png"),
+    pdf: require("../assets/pdf.png"),
 }
