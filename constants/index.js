@@ -13,7 +13,9 @@ export const colors = {
     white: "#fff",
     dark: "#000",
     greenLight: "#248E4265",
-    transparent: "#0000"
+    transparent: "#0000",
+    tabsBg: "#f6f6f6",
+    iconbg: "#eee"
 }
 
 export const font = {

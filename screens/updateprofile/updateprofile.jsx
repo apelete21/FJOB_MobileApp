@@ -7,11 +7,16 @@ import { imgs } from '../../images'
 import { setBackgroundColorAsync, set } from 'expo-navigation-bar'
 import PhoneInput from 'react-native-phone-number-input'
 import { styles } from './updateprofile.styles'
+import { useNavigation } from '@react-navigation/native'
 
 export function UpdateProfile() {
     (async function () {
         await setBackgroundColorAsync(colors.greenLight)
     })()
+    const navigation = useNavigation()
+    const goTabs = () =>{
+        navigation.navigate("tabs")
+    }
     return (
         <>
             <View style={styles.container}>
@@ -98,15 +103,17 @@ export function UpdateProfile() {
                         fontStyle={{
                             textTransform: 'none'
                         }}
-                    />
+                        onPress={goTabs}
+                        />
                     <Button name={"Skip for now"}
                         style={{
                             backgroundColor: colors.fourth
                         }}
                         fontStyle={{
                             color: colors.dark,
-                            textTransform: "auto"
+                            textTransform: "none"
                         }}
+                        onPress={goTabs}
                     />
                 </View>
 

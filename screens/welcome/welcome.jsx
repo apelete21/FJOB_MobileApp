@@ -9,7 +9,7 @@ import { Button } from '../../components'
 export function Welcome() {
     const navigation = useNavigation()
     const goSignUp = () => {
-        navigation.navigate("signup")
+        navigation.navigate("tabs")
     }
     return (
         <>

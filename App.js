@@ -1,4 +1,4 @@
-import { Confirm, NewPassword, PasswordUpdate, SignIn, Signup, UpdateProfile, Welcome } from './screens';
+import { Confirm, Home, NewPassword, PasswordUpdate, SignIn, Signup, Tabs, UpdateProfile, Welcome } from './screens';
 import { setBackgroundColorAsync } from 'expo-navigation-bar';
 import {
   useFonts,
@@ -39,9 +39,11 @@ export default function App() {
 
           {/* Header no present */}
           <Stack.Group screenOptions={{
-            header: () => { }
+            header: () => { },
+            headerTransparent: true
           }}>
             <Stack.Screen name='welcome' component={Welcome} />
+            <Stack.Screen name='tabs' component={Tabs} />
           </Stack.Group>
           {/* Header no present */}
 
