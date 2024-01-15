@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Signup } from '../signUp/signup';
-import { colors } from '../../constants';
+import { colors, font } from '../../constants';
 import { setBackgroundColorAsync } from 'expo-navigation-bar';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Home } from '../home/home';
@@ -22,14 +22,25 @@ export function Tabs() {
                 backgroundColor: colors.tabsBg
             },
             tabBarHideOnKeyboard: true,
-            tabBarActiveTintColor: colors.primary,
+            tabBarActiveTintColor: colors.white,
+            tabBarActiveBackgroundColor: colors.primary,
+            tabBarItemStyle: {
+                marginVertical: 4,
+                marginHorizontal: "4%",
+                borderRadius: 999
+            },
             tabBarStyle: {
                 borderColor: "#fff",
                 backgroundColor: "#fff",
-                elevation: 5
-            }
+                elevation: 50,
+            },
+            tabBarLabelStyle: {
+                fontFamily: font.p8,
+                textTransform: "capitalize",
+            },
+
         }}>
-            <Tab.Screen name="Home" component={Home.Page} options={{
+            <Tab.Screen name="home" component={Home} options={{
                 tabBarIcon: ({ color }) => (
                     <MaterialCommunityIcons name="home-variant-outline" color={color} size={26} />
                 ),
@@ -48,7 +59,7 @@ export function Tabs() {
                     ),
                 }}
             />
-            <Tab.Screen name="Settings" component={Settings} 
+            <Tab.Screen name="settings" component={Settings} 
                 options={{
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="cog-outline" color={color} size={26} />

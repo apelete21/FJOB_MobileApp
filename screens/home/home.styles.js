@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { colors, font } from "../../constants";
+import { colors, font, viewport } from "../../constants";
 
 export const styles = StyleSheet.create({
     companyIcon: {
@@ -53,22 +53,24 @@ export const styles = StyleSheet.create({
         borderRadius: 25,
         paddingVertical: 20,
         paddingHorizontal: 28,
-        width: "96%",
         marginVertical: 18,
     },
     lists: {
-        alignItems: "center",
+        justifyContent: "center",
+        paddingHorizontal: 15,
+        // marginBottom: viewport.height / 2.6
     },
-    recommendationText: {
+    subTitle: {
         fontSize: 20,
         fontFamily: font.p6,
-        marginVertical: 15,
+        marginTop: 20,
+        marginBottom: 5,
+        marginHorizontal: 15
     },
     categories: {
         flexDirection: "row",
-        flexWrap: 'wrap',
         gap: 20,
-        marginVertical: 10
+        marginHorizontal: 15
     },
     ctgItem: {
         backgroundColor: colors.iconbg,
@@ -90,11 +92,13 @@ export const styles = StyleSheet.create({
     headerText: {
         fontFamily: font.p6,
         fontSize: 30,
-        maxWidth: "60%",
+        maxWidth: "65%",
+        paddingHorizontal: 15,
     },
     searchBar: {
         flexDirection: "row",
         marginVertical: 15,
+        marginHorizontal: 15,
         gap: 10,
         paddingHorizontal: 25,
         paddingVertical: 15,
@@ -111,12 +115,8 @@ export const styles = StyleSheet.create({
         width: 25,
         height: 25,
     },
-    container: {
-        flex: 1,
-        // paddingTop: viewport.height / 8,
-        backgroundColor: colors.tabsBg,
+    scrollview: {
         paddingHorizontal: 15,
-        paddingBottom: 50,
     },
     HeaderLeft: {
         gap: 10,
@@ -151,6 +151,5 @@ export const styles = StyleSheet.create({
     Icon: {
         width: "50%",
         height: "50%",
-
-    }
+    },
 })
